@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.ws.rs.Path;
+import java.io.IOException;
 
 @RestController
 @RequestMapping(path = "/exchange")
@@ -26,7 +27,7 @@ public class ExchangeController {
 
     @GetMapping("/{amount}")
 //    public Exchange sekToEur(@RequestBody Exchange exchange) {
-    public Exchange sekToEur(@PathVariable("amount") double amount) {
+    public Exchange sekToEur(@PathVariable("amount") double amount) throws IOException {
         System.out.println("I am in exchange-service Controller class method");
 //        return exchangeService.getExchangeInfo(exchange.getAmount(), exchange.getFromCurrency(), exchange.getToCurrency());
         Exchange exchange1 = exchangeService.getExchangeInfo(amount);
