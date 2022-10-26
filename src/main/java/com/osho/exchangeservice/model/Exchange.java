@@ -2,25 +2,27 @@ package com.osho.exchangeservice.model;
 
 public class Exchange {
 
-    double amount;
+    double amountInSek;
     String fromCurrency;
     String toCurrency;
+    double amountInEur;
 
     public Exchange() {
     }
 
-    public Exchange(double amount, String fromCurrency, String toCurrency) {
-        this.amount = amount;
+    public Exchange(double amountInSek, String fromCurrency, String toCurrency, double amountInEur) {
+        this.amountInSek = amountInSek;
         this.fromCurrency = fromCurrency;
         this.toCurrency = toCurrency;
+        this.amountInEur = amountInEur;
     }
 
-    public double getAmount() {
-        return amount;
+    public double getAmountInSek() {
+        return amountInSek;
     }
 
-    public void setAmount(double amount) {
-        this.amount = amount;
+    public void setAmountInSek(double amountInSek) {
+        this.amountInSek = amountInSek;
     }
 
     public String getFromCurrency() {
@@ -37,5 +39,13 @@ public class Exchange {
 
     public void setToCurrency(String toCurrency) {
         this.toCurrency = toCurrency;
+    }
+
+    public double getAmountInEur() {
+        return amountInEur;
+    }
+
+    public void setAmountInEur(double amountInEur) {
+        this.amountInEur = amountInEur;
     }
 }

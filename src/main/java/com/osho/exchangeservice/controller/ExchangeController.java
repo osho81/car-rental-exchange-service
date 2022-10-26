@@ -15,12 +15,21 @@ public class ExchangeController {
     @Autowired
     private ExchangeService exchangeService;
 
+//    @GetMapping("/{amount}")
+////    public Exchange sekToEur(@RequestBody Exchange exchange) {
+//    public Exchange sekToEur(@PathVariable("amount") double amount) {
+//        System.out.println("I am in exchange-service Controller class method");
+////        return exchangeService.getExchangeInfo(exchange.getAmount(), exchange.getFromCurrency(), exchange.getToCurrency());
+//        Exchange exchange1 = new Exchange(amount, "SEK", "EUR", 0); // 0 temporary
+//        return exchange1;
+//    }
+
     @GetMapping("/{amount}")
 //    public Exchange sekToEur(@RequestBody Exchange exchange) {
     public Exchange sekToEur(@PathVariable("amount") double amount) {
         System.out.println("I am in exchange-service Controller class method");
 //        return exchangeService.getExchangeInfo(exchange.getAmount(), exchange.getFromCurrency(), exchange.getToCurrency());
-        Exchange exchange1 = new Exchange(100, "SEK", "EUR");
+        Exchange exchange1 = exchangeService.getExchangeInfo(amount);
         return exchange1;
     }
 
