@@ -11,7 +11,7 @@ import javax.ws.rs.Path;
 import java.io.IOException;
 
 @RestController
-@RequestMapping(path = "/exchange")
+@RequestMapping(path = "/change")
 public class ExchangeController {
 
     @Autowired
