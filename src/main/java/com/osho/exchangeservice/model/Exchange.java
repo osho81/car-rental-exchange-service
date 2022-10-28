@@ -1,5 +1,6 @@
 package com.osho.exchangeservice.model;
 
+// Class mirroring the Exchange class in calling service (twCarRental)
 public class Exchange {
 
     double amountInSek;
