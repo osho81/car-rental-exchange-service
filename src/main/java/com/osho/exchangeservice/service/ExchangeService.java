@@ -23,7 +23,7 @@ public class ExchangeService {
     public static final String ENDPOINT = "convert";
 
     public Exchange getExchangeInfo(double amount) throws IOException, JSONException {
-        System.out.println("I am in exchange-service Service class method");
+        System.out.println("I am in exchange-service Service class method"); // Control print
 
         String toCurrency = "EUR";
         String fromCurrency = "SEK";
@@ -46,7 +46,8 @@ public class ExchangeService {
         Response response = client.newCall(request).execute();
         JSONObject jo = new JSONObject(response.body().string()); // string(), NOT toString()
 
-        // Pass in returned response values into exchange object; return it to requesting twCarRental service
+        // Pass in returned response values into exchange object;
+        // return it to the requesting twCarRental service
         Exchange exchangedReturned = new Exchange(amount, fromCurrency, toCurrency, jo.getDouble("result"));
         return exchangedReturned;
 

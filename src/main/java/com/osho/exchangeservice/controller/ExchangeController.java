@@ -17,7 +17,7 @@ public class ExchangeController {
 
     @GetMapping("/{amount}")
     public Exchange sekToEur(@PathVariable("amount") double amount) throws IOException, JSONException {
-        System.out.println("I am in exchange-service Controller class method");
+        System.out.println("I am in exchange-service Controller class method"); // Control print
         Exchange exchange = exchangeService.getExchangeInfo(amount);
         return exchange;
     }
