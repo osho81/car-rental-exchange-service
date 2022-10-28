@@ -7,7 +7,6 @@ import okhttp3.Response;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.stereotype.Service;
-
 import java.io.IOException;
 
 // Service class for calling external api layer; external url is:
