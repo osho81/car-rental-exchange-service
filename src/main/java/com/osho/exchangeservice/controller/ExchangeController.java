@@ -15,7 +15,7 @@ public class ExchangeController {
     @Autowired
     private ExchangeService exchangeService;
 
-    @GetMapping("/{amount}")
+    @GetMapping("/{amount}") // USER ROLE REQUIRED
     public Exchange sekToEur(@PathVariable("amount") double amount) throws IOException, JSONException {
         System.out.println("I am in exchange-service Controller class method"); // Control print
         Exchange exchange = exchangeService.getExchangeInfo(amount);

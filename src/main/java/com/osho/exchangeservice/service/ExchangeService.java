@@ -9,7 +9,7 @@ import org.json.JSONObject;
 import org.springframework.stereotype.Service;
 import java.io.IOException;
 
-// Service class for calling external api layer; external url is:
+// Service class for calling external api; external url is:
 // "https://api.apilayer.com/currency_data/convert?to={to}&from={from}&amount={amount}"
 // Example: "https://api.apilayer.com/currency_data/convert?to=EUR&from=SEK&amount=1000"
 
