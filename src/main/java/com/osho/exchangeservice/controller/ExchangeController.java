@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.io.IOException;
 
 @RestController
-// path = "/change" to avoid any conflict with get-method "/exchange" in twCarRental
+// path = "/change" to differ it from get-method "/exchange" in twCarRental
 @RequestMapping(path = "/change")
 public class ExchangeController {
 
