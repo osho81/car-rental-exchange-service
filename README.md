@@ -1,7 +1,7 @@
 ## Part of Car Rental Application
 
 ### Description
-API-gateway for the Car Rental system.
+Rate exchange microservice for the Car Rental system.
 
 ##### It is the gateway app of a wider car rental service project, which consists of:
 - This rate exchange microservice
